@@ -39,3 +39,23 @@ header {
     color: #d9a74a;
   }
 }
+footer {
+  position: absolute;
+  bottom: 0;
+  border-top: 1px solid #313b3f;
+  padding: 5px 5px 1px 5px;
+  box-sizing: border-box;
+  width: 100%;
+  .icon-grid {
+    justify-content: center;
+    display: grid;
+    // grid-template-columns: repeat(3, 40px);
+    a {
+      width: 40px;
+      display: block;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
