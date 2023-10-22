@@ -49,9 +49,10 @@ footer {
   .icon-grid {
     justify-content: center;
     display: grid;
-    // grid-template-columns: repeat(3, 40px);
+    grid-column-gap: 10px;
+    grid-template-columns: repeat(3, 35px);
     a {
-      width: 40px;
+      width: 35px;
       display: block;
       img {
         width: 100%;
