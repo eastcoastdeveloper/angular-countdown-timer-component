@@ -1,3 +1,5 @@
+@import './app/colors.scss';
+
 html,
 body {
   padding: 0;
@@ -8,7 +10,7 @@ header {
   letter-spacing: 0.5px;
   cursor: pointer;
   background-color: #313b3f;
-  color: #d9a74a;
+  color: $yellowGold;
   overflow: auto;
   padding: 5px 20px 7px 15px;
   position: relative;
@@ -36,7 +38,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
     float: right;
-    color: #d9a74a;
+    color: $yellowGold;
   }
 }
 
