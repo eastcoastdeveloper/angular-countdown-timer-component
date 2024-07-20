@@ -8,7 +8,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 export class AppComponent implements AfterViewInit {
   date: any;
   now: any;
-  targetDate: any = new Date(2024, 5, 11);
+  targetDate: any = new Date(2025, 5, 11);
   targetTime: any = this.targetDate.getTime();
   difference: number;
   months: Array<string> = [
