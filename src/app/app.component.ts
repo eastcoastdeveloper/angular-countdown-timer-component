@@ -5,6 +5,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
 export class AppComponent implements AfterViewInit {
   date: any;
   now: any;
@@ -39,7 +40,6 @@ export class AppComponent implements AfterViewInit {
       this.tickTock();
       this.difference = this.targetTime - this.now;
       this.difference = this.difference / (1000 * 60 * 60 * 24);
-
       !isNaN(this.days.nativeElement.innerText)
         ? (this.days.nativeElement.innerText = Math.floor(this.difference))
         : (this.days.nativeElement.innerHTML = `<img src="https://i.gifer.com/VAyR.gif" />`);
