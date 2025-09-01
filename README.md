@@ -1,3 +1,3 @@
 # Angular Countdown Timer Comonent
 
-Blog Post: https://frontenddevelopment.tech/angular-countdown-timer/
+ng-serve in the CLI from package.json
