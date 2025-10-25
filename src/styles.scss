@@ -5,45 +5,17 @@ body {
   padding: 0;
   margin: 0 !important;
 }
-header {
-  font: normal 14px sans-serif;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  background-color: #313b3f;
-  color: $yellowGold;
-  overflow: auto;
-  padding: 5px 20px 7px 15px;
-  position: relative;
-  .fat-arrow {
-    position: relative;
-    float: left;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    span {
-      font-size: 20px;
-      font-style: italic;
-    }
-    .caret {
-      font-size: 30px;
-      line-height: 22px;
-      display: inline-block;
-      font-weight: lighter;
-    }
-  }
-  a {
-    text-decoration: none;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    float: right;
-    color: $yellowGold;
-  }
-}
 
-@media screen and (max-width: 768px) {
-  header {
-    display: none;
+// footer style
+footer {
+  position: fixed;
+  bottom: 0;
+  font: normal 13px sans-serif;
+  background-color: #313b3f;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  a {
+    color: white;
   }
 }
