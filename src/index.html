@@ -2,10 +2,8 @@
 
 <footer id="rotatingFooter"></footer>
 <script>
-  // document.addEventListener("DOMContentLoaded", () => {
   const footer = document.getElementById('rotatingFooter');
 
-  // Array of content objects
   const footerItems = [
     {
       img: 'https://webdevunlimited.tech/images/amazon-logo.png',
@@ -13,19 +11,18 @@
       link: 'https://tinyurl.com/3m5hyrk5',
     },
     {
-      img: 'https://webdevunlimited.tech/images/amazon-logo.png',
+      img: 'https://webdevunlimited.tech/images/favicon.png',
       text: 'Web Dev Unlimited',
       link: 'https://webdevunlimited.tech/',
     },
   ];
 
-  // Styling for the fixed footer
   Object.assign(footer.style, {
     position: 'fixed',
     bottom: '0',
     left: '0',
     width: '100%',
-    background: 'rgba(0,0,0,0.8)',
+    background: '#0c1020',
     color: '#fff',
     textAlign: 'center',
     padding: '5px',
@@ -50,16 +47,15 @@
   footer.appendChild(img);
   footer.appendChild(textLink);
 
-  // Function to display a random item
   function showRandomItem() {
     const item = footerItems[Math.floor(Math.random() * footerItems.length)];
     img.src = item.img;
     textLink.href = item.link;
     textLink.textContent = item.text;
+    textLink.target = '_blank';
+    textLink.rel = 'noopener noreferrer';
   }
 
-  // Show one immediately, then change every 10 seconds
   showRandomItem();
   setInterval(showRandomItem, 10000);
-  // });
 </script>
