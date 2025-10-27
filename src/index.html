@@ -1,7 +1,65 @@
 <my-app>loading</my-app>
 
-<footer>
-  <a href="https://tinyurl.com/3m5hyrk5" target="_blank"
-    >CMSs, E-Commerce Tools, & Website Builders Explained</a
-  >
-</footer>
+<footer id="rotatingFooter"></footer>
+<script>
+  // document.addEventListener("DOMContentLoaded", () => {
+  const footer = document.getElementById('rotatingFooter');
+
+  // Array of content objects
+  const footerItems = [
+    {
+      img: 'https://webdevunlimited.tech/images/amazon-logo.png',
+      text: 'CMSs, E-Commerce Tools, & Website Builders Explained',
+      link: 'https://tinyurl.com/3m5hyrk5',
+    },
+    {
+      img: 'https://webdevunlimited.tech/images/amazon-logo.png',
+      text: 'Web Dev Unlimited',
+      link: 'https://webdevunlimited.tech/',
+    },
+  ];
+
+  // Styling for the fixed footer
+  Object.assign(footer.style, {
+    position: 'fixed',
+    bottom: '0',
+    left: '0',
+    width: '100%',
+    background: 'rgba(0,0,0,0.8)',
+    color: '#fff',
+    textAlign: 'center',
+    padding: '5px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '10px',
+    zIndex: '9999',
+    fontFamily: 'sans-serif',
+  });
+
+  const img = document.createElement('img');
+  img.style.height = '25px';
+  img.style.width = 'auto';
+  img.style.borderRadius = '4px';
+
+  const textLink = document.createElement('a');
+  textLink.style.color = '#fff';
+  textLink.style.textDecoration = 'none';
+  textLink.style.fontSize = '.9rem';
+
+  footer.appendChild(img);
+  footer.appendChild(textLink);
+
+  // Function to display a random item
+  function showRandomItem() {
+    const item = footerItems[Math.floor(Math.random() * footerItems.length)];
+    img.src = item.img;
+    textLink.href = item.link;
+    textLink.textContent = item.text;
+  }
+
+  // Show one immediately, then change every 10 seconds
+  showRandomItem();
+  setInterval(showRandomItem, 10000);
+  // });
+</script>
