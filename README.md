@@ -124,7 +124,7 @@ This value is rendered in the template.
 @ViewChild('seconds') seconds: ElementRef;
 ```
 
-| Template Ref | DOM Node Updates | Purpose                  |
+| Template Ref | DOM Updates      | Purpose                  |
 | ------------ | ---------------- | ------------------------ |
 | `#days`      | `innerText`      | Shows remaining days     |
 | `#hours`     | `innerText`      | Hours left today         |
